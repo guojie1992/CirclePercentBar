@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
-        android:layout_marginLeft="95dp"
+        android:layout_marginLeft="30dp"
         android:orientation="vertical">
 
     <include layout="@layout/online_stu_info"/>
@@ -37,7 +37,7 @@
 
             <com.android.tu.circlelibrary.CirclePercentBar
                 android:id="@+id/circle_bar"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_margin="5dp"
@@ -46,7 +46,7 @@
                 app:arcWidth="3dp"
                 app:centerTextColor="@color/char_blue"
                 app:centerTextSize="10sp"
-                app:circleRadius="20dp" />
+                app:circleRadius="25dp" />
 
         </LinearLayout>
 
@@ -64,7 +64,7 @@
 
             <com.android.tu.circlelibrary.CirclePercentBar
                 android:id="@+id/circle_bar_two"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_margin="5dp"
@@ -73,7 +73,7 @@
                 app:arcWidth="3dp"
                 app:centerTextColor="@color/char_blue"
                 app:centerTextSize="10sp"
-                app:circleRadius="20dp" />
+                app:circleRadius="25dp" />
 
         </LinearLayout>
 
@@ -91,7 +91,7 @@
 
             <com.android.tu.circlelibrary.CirclePercentBar
                 android:id="@+id/circle_bar_three"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_margin="5dp"
@@ -100,7 +100,7 @@
                 app:arcWidth="3dp"
                 app:centerTextColor="@color/char_blue"
                 app:centerTextSize="10sp"
-                app:circleRadius="20dp" />
+                app:circleRadius="25dp" />
 
         </LinearLayout>
 
@@ -119,7 +119,7 @@
 
             <com.android.tu.circlelibrary.CirclePercentBar
                 android:id="@+id/circle_bar_four"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_margin="5dp"
@@ -128,7 +128,7 @@
                 app:arcWidth="3dp"
                 app:centerTextColor="@color/char_blue"
                 app:centerTextSize="10sp"
-                app:circleRadius="20dp" />
+                app:circleRadius="25dp" />
         </LinearLayout>
 
     </LinearLayout>
