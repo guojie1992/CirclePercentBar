@@ -3,4 +3,8 @@
     <color name="colorCirclebg">#100000ff</color>
     <color name="colorStart">#1212F6</color>
     <color name="colorEnd">#F212C6</color>
+    <color name="cycle_blue">#3e8ff3</color>
+    <color name="green">#ff0000</color>
+    <color name="char_blue">#5ea0f4</color>
+    <color name="simple_white">#f3fbff</color>
 </resources>

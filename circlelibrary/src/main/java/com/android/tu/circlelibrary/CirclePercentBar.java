@@ -14,7 +14,7 @@ import android.util.AttributeSet;
 import android.view.View;
 
 /**
- * Created by tjy on 2017/7/25.
+ * Created by gjon 2018/01/30.
  */
 public class CirclePercentBar extends View{
 
@@ -25,6 +25,12 @@ public class CirclePercentBar extends View{
     private int mCenterTextColor;
     private int mCenterTextSize;
     private int mCircleRadius;
+
+    //除数
+    private int mDivisor;
+    //被除数
+    private int mDivided;
+
     private Paint arcPaint;
     private Paint arcCirclePaint;
     private Paint centerTextPaint;
@@ -50,17 +56,14 @@ public class CirclePercentBar extends View{
         mArcColor = typedArray.getColor(R.styleable.CirclePercentBar_arcColor,0xff0000);
         mArcWidth = typedArray.getDimensionPixelSize(R.styleable.CirclePercentBar_arcWidth, DisplayUtil.dp2px(context, 20));
         mCenterTextColor = typedArray.getColor(R.styleable.CirclePercentBar_centerTextColor, 0x0000ff);
-        mCenterTextSize = typedArray.getDimensionPixelSize(R.styleable.CirclePercentBar_centerTextSize, DisplayUtil.dp2px(context, 20));
+        mCenterTextSize = typedArray.getDimensionPixelSize(R.styleable.CirclePercentBar_centerTextSize, DisplayUtil.dp2px(context, 8));
         mCircleRadius = typedArray.getDimensionPixelSize(R.styleable.CirclePercentBar_circleRadius, DisplayUtil.dp2px(context, 100));
         arcStartColor = typedArray.getColor(R.styleable.CirclePercentBar_arcStartColor,
-                ContextCompat.getColor(mContext, R.color.colorStart));
+                ContextCompat.getColor(mContext, R.color.cycle_blue));
         arcEndColor = typedArray.getColor(R.styleable.CirclePercentBar_arcEndColor,
-                ContextCompat.getColor(mContext, R.color.colorEnd));
-
+                ContextCompat.getColor(mContext, R.color.cycle_blue));
         typedArray.recycle();
-
         initPaint();
-
     }
 
     private void initPaint() {
@@ -134,7 +137,11 @@ public class CirclePercentBar extends View{
         canvas.rotate(90, getWidth()/ 2, getHeight()/ 2);
         canvas.drawCircle(getWidth()/2,getHeight()/2-mCircleRadius+mArcWidth/2,mArcWidth/2,startCirclePaint);
 
-        String data= String.valueOf(mCurData) +"%";
+        mDivisor = 12;
+        mDivided = 4;
+        mCurData = mDivided/mDivisor;
+        //String data= String.valueOf(mCurData) +"/"+"学时";
+        String data = mDivided + "/" +mDivisor + "学时";
         centerTextPaint.getTextBounds(data,0,data.length(),textBoundRect);
         canvas.drawText(data,getWidth()/2-textBoundRect.width()/2,getHeight()/2+textBoundRect.height()/2,centerTextPaint);
 
