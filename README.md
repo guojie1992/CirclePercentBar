@@ -1,5 +1,6 @@
 # 效果图
 ![](https://github.com/guojie1992/CirclePercentBar/blob/master/demogif/%E7%99%BE%E5%88%86%E6%AF%94%E9%9A%8F%E6%9C%BA%E8%AE%A1%E7%AE%97.png)
+![](https://github.com/guojie1992/CirclePercentBar/blob/master/demogif/%E7%99%BE%E5%88%86%E6%AF%94%E8%AE%A1%E7%AE%97.png)
 # 使用方法
 1、项目下的build.gradle添加
 
